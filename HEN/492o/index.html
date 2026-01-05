@@ -397,10 +397,10 @@ function triggerX()
 	t_out=0;
 	total_loops=0;
 }
-function HFWmsg()
+function HFWmsg(fwv)
 {
-	showMsg("<h2><span style='color:red'>Asegurate de tener instalado el Firmware (HFW) 4.92 en tu consola antes de usar esto!</h2></span>");
+	showMsg("<h2><span style='color:red'>Asegurate de tener instalado el Firmware (HFW) 4.92 en tu consola antes de usar esto! (Actualmente instalado: " + fwv + ")</h2></span>");
 	throw new Error('');
 }
-if(fwv=="4.92"){initROP(true)}else{HFWmsg()}
+if(fwv=="4.92"){initROP(true)}else{HFWmsg(fwv)}
 </script>
